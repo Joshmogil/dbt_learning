@@ -1,26 +1,93 @@
-# PostgreSQL and pgAdmin Setup
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project Title</title>
+</head>
+<body>
 
-This setup includes a Docker Compose file to run PostgreSQL and pgAdmin containers, along with an initialization script for the database. It also includes a Makefile for easy management of these services.
+<h1>Project Title</h1>
+<p>Brief description of your project goes here.</p>
 
-## Getting Started
+<h2>Description</h2>
+<p>This Makefile facilitates the management of Docker Compose services for PostgreSQL and pgAdmin, as well as setting up a virtual environment for dbt (Data Build Tool) for database transformations.</p>
 
-First, ensure you have Docker and Docker Compose installed on your system. Clone or download this repository to your local machine.
+<h2>Prerequisites</h2>
+<ul>
+    <li>Docker and Docker Compose</li>
+    <li>Python 3 and pip</li>
+</ul>
 
-## Using the Makefile
+<h2>Usage</h2>
 
-The Makefile includes commands to simplify the process of starting and stopping your Docker containers.
+<h3>Docker Compose Commands</h3>
 
-### Starting the Services
+<h4>Starting PostgreSQL and pgAdmin</h4>
+<code>make pg-up</code>
+<p>Starts PostgreSQL server and pgAdmin in detached mode. Displays access information.</p>
 
-To start the PostgreSQL and pgAdmin services, run:
+<h4>Stopping PostgreSQL and pgAdmin</h4>
+<code>make pg-down</code>
+<p>Stops the running services.</p>
 
-make pg-up
+<h4>Checking the Status of the Services</h4>
+<code>make pg-status</code>
+<p>Displays the status of PostgreSQL and pgAdmin services.</p>
 
-To them down, run:
+<h4>Cleaning Up Persistent Data</h4>
+<code>make pg-clean</code>
+<p>Stops services and removes persisted data (like PostgreSQL database files).</p>
 
-make pg-down
+<h3>dbt Virtual Environment Commands</h3>
 
-By default data for your database will be persisted in a mounted volume in the ./postgres directory, to safely clean it up run:
+<h4>Setting up the dbt Virtual Environment</h4>
+<code>make dbt-setup</code>
+<p>Creates a virtual environment and installs dbt packages.</p>
 
-sudo su 
-make pg-clean
+<h4>Activating the dbt Virtual Environment</h4>
+<code>make dbt-activate</code>
+<p>Prints the command to activate the virtual environment.</p>
+
+<h4>Deactivating the dbt Virtual Environment</h4>
+<code>make dbt-deactivate</code>
+<p>Prints the command to deactivate the virtual environment.</p>
+
+<h4>Cleaning the dbt Virtual Environment</h4>
+<code>make dbt-clean</code>
+<p>Removes the virtual environment and its dependencies.</p>
+
+<h2>Access Details</h2>
+
+<h3>pgAdmin</h3>
+<p><strong>URL</strong>: <a href="http://localhost:5050">http://localhost:5050</a></p>
+<p><strong>Email</strong>: admin@admin.com</p>
+<p><strong>Password</strong>: root</p>
+
+<h3>PostgreSQL</h3>
+<ul>
+    <li><strong>Host</strong>: localhost</li>
+    <li><strong>Port</strong>: 5432</li>
+    <li><strong>Server</strong>: dbt</li>
+    <li><strong>Database</strong>: postgres</li>
+    <li><strong>User</strong>: postgres</li>
+    <li><strong>Password</strong>: postgres</li>
+</ul>
+
+<h3>dbt</h3>
+<ul>
+    <li><strong>Host</strong>: localhost</li>
+    <li><strong>Port</strong>: 5432</li>
+    <li><strong>Server</strong>: dbt</li>
+    <li><strong>Database</strong>: example</li>
+    <li><strong>Schema</strong>: source</li>
+    <li><strong>User</strong>: dbt_user</li>
+    <li><strong>Password</strong>: password</li>
+</ul>
+
+<h2>Contributing</h2>
+<p>Instructions for how to contribute to this project.</p>
+
+<h2>License</h2>
+<p>Specify the license under which this project is available.</p>
+
+</body>
+</html>
