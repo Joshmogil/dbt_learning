@@ -1,3 +1,4 @@
 **/postgres_data
 **/.venv_dbt
 **/josh_users
+**/logs
