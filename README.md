@@ -14,12 +14,13 @@ The Makefile includes commands to simplify the process of starting and stopping 
 
 To start the PostgreSQL and pgAdmin services, run:
 
-make db-up
+make pg-up
 
 To them down, run:
 
-make db-down
+make pg-down
 
 By default data for your database will be persisted in a mounted volume in the ./postgres directory, to safely clean it up run:
 
-make db-clean-volume
+sudo su 
+make pg-clean

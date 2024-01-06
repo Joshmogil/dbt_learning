@@ -1,7 +1,7 @@
 {
     "Servers": {
         "1": {
-            "Name": "My PostgreSQL Server",
+            "Name": "dbt",
             "Group": "Servers",
             "Host": "postgres",
             "Port": 5432,
