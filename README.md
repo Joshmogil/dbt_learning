@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Project Title</title>
+    <title>/title>
 </head>
 <body>
 
-<h1>Project Title</h1>
-<p>Brief description of your project goes here.</p>
+<h1>Dbt Core Learning Environment</h1>
+<p>Convenience repo for setting up dbt with a basic postgres connection</p>
 
 <h2>Description</h2>
 <p>This Makefile facilitates the management of Docker Compose services for PostgreSQL and pgAdmin, as well as setting up a virtual environment for dbt (Data Build Tool) for database transformations.</p>
@@ -17,7 +17,12 @@
     <li>Python 3 and pip</li>
 </ul>
 
-<h2>Usage</h2>
+<h2>Quick Start</h2>
+<code>make pg-up #starts postgres and pgadmin servers, initializes some sample data</code>
+<code>make dbt-setup #sets up virtual environment with dbt-core and dbt-postgres</code>
+<p>Can sort of follow along with this guide: https://medium.com/israeli-tech-radar/first-steps-with-dbt-over-postgres-db-f6b350bf4526</p>
+
+<h2>More Info</h2>
 
 <h3>Docker Compose Commands</h3>
 
@@ -42,10 +47,6 @@
 <h4>Setting up the dbt Virtual Environment</h4>
 <code>make dbt-setup</code>
 <p>Creates a virtual environment and installs dbt packages.</p>
-
-<h4>Activating the dbt Virtual Environment</h4>
-<code>make dbt-activate</code>
-<p>Prints the command to activate the virtual environment.</p>
 
 <h4>Deactivating the dbt Virtual Environment</h4>
 <code>make dbt-deactivate</code>
