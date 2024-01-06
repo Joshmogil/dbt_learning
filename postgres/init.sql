@@ -14,6 +14,9 @@ CREATE USER dbt_user WITH PASSWORD 'password';
 -- Grant all privileges on the schema 'source' to 'dbt_user'
 GRANT ALL PRIVILEGES ON SCHEMA source TO dbt_user;
 
+-- Grant all privileges on the database 'example' to 'dbt_user'
+GRANT ALL PRIVILEGES ON DATABASE example TO dbt_user;
+
 -- Set default search path for 'dbt_user' to 'source'
 ALTER USER dbt_user SET search_path TO source;
 
