@@ -15,10 +15,15 @@
 </ul>
 
 <h2>Quick Start</h2>
-
+<code>
+    make pg-up                      #view pgadmin at http://localhost:5050</br>
+    make dbt-setup                  #venv with dbt-core and dbt-postgres</br>
+    source .venv_dbt/bin/activate   #activate venv</br>
+    dbt init users                  #init your first dbt project, see ./.dbt-profile-example!</br>           
+</code>
 <ul>
-    <li><code>make pg-up #starts postgres and pgadmin servers, initializes some sample data</code></li>
-    <li><code>make dbt-setup #sets up virtual environment with dbt-core and dbt-postgres</code></li>
+    <li></li>
+    <li><code>make dbt-setup #venv with dbt-core and dbt-postgres </code></li>
 </ul>
 <p>Can sort of follow along with this guide: https://medium.com/israeli-tech-radar/first-steps-with-dbt-over-postgres-db-f6b350bf4526</p>
 
